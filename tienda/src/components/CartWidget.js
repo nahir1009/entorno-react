@@ -1,12 +1,14 @@
-import Badge from '@material-ui/core/Badge';
+import react from "react"
 
 const CartWidget = () => {
     return(
-        <Badge badgeContent={4} 
-        color="primary">
-          <MailIcon />
-        </Badge>
-    )
+        <react.Fragment>
+          <img src="carrito-de-compras.pgn"></img>
+        </react.Fragment>
+        
+    );
     
 
 }
+
+export default CartWidget;
