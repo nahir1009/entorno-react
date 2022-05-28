@@ -1,6 +1,6 @@
 
 import {useState} from "react"
-export default function  itemCount (){
+export default function  itemCount (stock,initial,onAdd){
    const  [contador,SetContador]=useState(0)
     const incrementar = () =>{
         SetContador (contador + 1)
@@ -9,9 +9,7 @@ export default function  itemCount (){
         SetContador (contador - 1)
     }
 
-    const onAdd = () => {
-        alert("compraste" + contador + "items")
-    }
+   
     return( 
         
         <div>
@@ -22,7 +20,7 @@ export default function  itemCount (){
 
             <button onClick={decrementar}>−</button>
             <div>
-                <button onClick={onAdd}>Agregar compra</button>
+                <button onClick={() => onAdd()}>Agregar compra</button>
             </div>
         </div>
     )

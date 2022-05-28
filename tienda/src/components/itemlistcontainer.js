@@ -1,4 +1,7 @@
-function itemlistcontainer(props){
+ export function itemlistcontainer(props){ 
+    const onAdd = (contador) => {
+        alert("compraste" + contador + "items")
+    }
     return(
         <div>
             {props.greeting}
