@@ -1,11 +1,20 @@
- export function itemlistcontainer(props){ 
-    const onAdd = (contador) => {
-        alert("compraste" + contador + "items")
-    }
-    return(
-        <div>
-            {props.greeting}
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
-        </div>
-    );
+import Item from './Item'
+
+const ItemListContainer = ({booksList, cartItemsCount, setCartItemsCount}) => {
+  return (
+    <>
+      {
+        booksList.map(book => (
+          <Item 
+            key={book.id} 
+            book={book} 
+            cartItemsCount={cartItemsCount} 
+            setCartItemsCount={setCartItemsCount}
+          />
+        ))
+      }
+    </>
+  )
 }
+
+export default ItemListContainer
