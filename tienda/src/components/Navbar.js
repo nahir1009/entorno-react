@@ -3,7 +3,7 @@ const Navbar = () => {
         <div className="Navbar">
         <ul>
             <li>inicio</li>
-            <li>ropa</li>
+            <li>libros</li>
             <li>destacado</li>
             <li>nuevo</li>
         </ul>
